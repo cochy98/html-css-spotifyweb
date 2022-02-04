@@ -8,6 +8,7 @@
 /* Font per tutto il body */
 body{
     font-family: 'Circular Std', sans-serif;
+    color: white;
 }
 
 /* Reset utilizzato con float, per evitare il collasso dei blocchi */
@@ -64,6 +65,30 @@ main section#main-nav{
 main section#main-content-nav{
     width: 80%;
     background-color: #141922;
+    padding: 10vh 1.2rem;
+}
+
+main section#main-content-nav nav{
+    justify-content: center;
+}
+
+main section#main-content-nav ul {
+	margin: 1rem;
+}
+
+main section#main-content-nav li{
+    display: inline;
+}
+
+section#main-content-nav .songs-recently{
+	flex-wrap: wrap;
+}
+
+section#main-content-nav .songs-recently .song{
+    width: 200px;
+    height: 200px;
+    margin: 2rem .8rem 2rem 0;
+    background-color: bisque;
 }
 
 footer{
