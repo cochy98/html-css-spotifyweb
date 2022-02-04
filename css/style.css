@@ -1,0 +1,94 @@
+/* RESET */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Font per tutto il body */
+body{
+    font-family: 'Circular Std', sans-serif;
+}
+
+/* Reset utilizzato con float, per evitare il collasso dei blocchi */
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.fl-left{float: left;}
+.fl-right{float: right;}
+
+.d-flex{display: flex;}
+
+.btn-large{
+    padding: 10px 20px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 45px;
+    text-decoration: none;
+}
+
+.call-to-action,
+footer section#player{
+    height: 10vh;
+}
+
+.call-to-action{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 2rem;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+main{
+    height: 90vh;
+    overflow-y: scroll;
+}
+
+main section#main-nav,
+main section#main-content-nav{
+    height: 100%;
+}
+
+main section#main-nav{
+    width: 20%;
+    background-color: #000000;
+}
+
+main section#main-content-nav{
+    width: 80%;
+    background-color: #141922;
+}
+
+footer{
+    background-color: #282828;
+}
+
+/* ? FOOTER */
+footer section#player{
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer section#player .player-left,
+footer section#player .player-right{
+    width: 20%;
+    height: 100%;
+}
+
+footer section#player .player-center{
+    width: 40%;
+    height: 100%;
+}
+
+footer section#player .player-left,
+footer section#player .player-right,
+footer section#player .player-center{
+    background-color: tomato;
+}
