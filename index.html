@@ -21,28 +21,91 @@
     </div>
 
     <main class="clearfix">
-        <section id="main-nav" class="fl-left"></section>
+        <section id="main-nav" class="fl-left d-flex">
+            <nav>
+                <img class="main-logo" src="img/logo.svg" alt="Spotify Logo">
+                <img class="main-logo-small d-none" src="img/logo-small.svg" alt="Spotify Logo Small">
+                <ul>
+                    <li>
+                        <a href="#" class="d-flex al-center">
+                            <i class="fas fa-home"></i> <label class="none">Home</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="d-flex al-center">
+                            <i class="fas fa-search"></i> <label class="none">Cerca</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="d-flex al-center">
+                            <i class="fas fa-book-open"></i> <label class="none">La tua Libreria</label>
+                        </a>
+                    </li>
+                </ul>
+
+                <h3>PLAYLIST</h3>
+                <ul>
+                    <li class="d-flex al-center">
+                        <i class="fas fa-plus-square"></i>
+                        <p>Crea Playlist</p>
+                    </li>
+                    <li>Nome Playlist</li>
+                    <li>Nome Playlist</li>
+                    <li>Nome Playlist</li>
+                    <li>Nome Playlist</li>
+                    <li>Nome Playlist</li>
+                    <li>Nome Playlist</li>
+                    <li>Nome Playlist</li>
+                </ul>
+            </nav>
+
+            <div class="user-name">
+                <p><i class="far fa-arrow-alt-circle-down"></i> Installa app</p>
+                <div class="custom-hr"></div>
+                <div class="d-flex al-center">
+                    <div class="img-profile">
+                        <img src="img/profile.svg" alt="img profile">
+                    </div>
+                    <h2>John Doe</h2>
+                </div>
+                
+            </div>
+        </section>
 
         <section id="main-content-nav" class="fl-left">
             <nav class="d-flex">
                 <ul>
-                    <li>Item</li>
-                    <li>Item</li>
-                    <li>Item</li>
-                    <li>Item</li>
-                    <li>Item</li>
-                    <li>Item</li>
+                    <li>in evidenza</li>
+                    <li> podcast</li>
+                    <li>classifiche</li>
+                    <li>generi e mood</li>
+                    <li>nuove uscite</li>
+                    <li>scopri</li>
                 </ul>
             </nav>
             
             <h1>Recently played</h1>
             <div class="songs-recently d-flex">
-                <div class="song"></div>
-                <div class="song"></div>
-                <div class="song"></div>
-                <div class="song"></div>
-                <div class="song"></div>
-                <div class="song"></div>
+                <div class="card-item"></div>
+                <div class="card-item"></div>
+                <div class="card-item"></div>
+                <div class="card-item"></div>
+                <div class="card-item"></div>
+                <div class="card-item"></div>
+            </div>
+
+            <h1>Creato per Jonh Doe</h1>
+            <h3>Più ascolti, più accurati saranno i suggerimenti.</h3>
+            <div class="your-albums d-flex">
+                <div class="card-item"></div>
+                <div class="card-item"></div>
+            </div>
+
+            <h1>Artisti più popolari</h1>
+            <h3>Più ascolti, più accurati saranno i suggerimenti.</h3>
+            <div class="popular-artists d-flex">
+                <div class="card-item"></div>
+                <div class="card-item"></div>
             </div>
             
 
