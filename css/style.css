@@ -140,6 +140,10 @@ main nav#main-nav li:active{
     border-left: 3px solid #b1ff2f;
 }
 
+#main-nav .main-logo{
+    width: 80%;
+}
+
 #main-nav .nav-nenu,
 #main-nav .nav-playlists{
     margin-top: 2rem;
