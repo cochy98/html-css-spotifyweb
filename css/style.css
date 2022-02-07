@@ -257,6 +257,34 @@ footer section#player .player-center{
     background-color: tomato;
 }
 
+footer h2{
+    font-size: 1.1rem;
+}
+
+footer h3{
+    color: #a3a3a3;
+    font-size: 0.8rem;
+}
+
+section#player .player-left{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player-left #song-info{
+    align-items: center;
+}
+
+.player-left #cover-song{
+    width: 65px;
+    height: 65px;
+    margin: 0 1rem;
+}
+
+.player-left #cover-song>img{
+    width: 100%;
+}
+
 @media screen and (max-width: 576px) {
     /* ! INIZIO Regole per renponsive main-nav su mobile */
     main section#main-left {
