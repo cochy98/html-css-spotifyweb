@@ -197,13 +197,28 @@ section#main-right .songs-recently{
 }
 
 section#main-right .card-item{
-    width: 200px; 
-    height: 200px;
-    margin: 2rem .8rem 2rem 0;
-    background-color: bisque;
+    width: 200px;
+    text-align: center;
+    margin: 2rem .8rem 3rem 0;
 }
 
-.popular-artists .card-item{
+section#main-right .cover-item{
+    width: 100%; 
+    height: 200px;
+    margin-bottom: 1rem;
+}
+
+section#main-right .cover-item>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+.popular-artists .cover-item>img{
     border-radius: 50%;
 }
 
@@ -283,9 +298,22 @@ footer section#player .player-center{
     /* ! FINE Regole per renponsive main-nav su mobile */
 }
 
+/* ? Media query per gestire la grandezza dei box tra un dimesione mobile e tablet */
+@media screen and (min-width: 577px) and (max-width: 767px) {
+    section#main-right .card-item{
+        width: 150px;
+    }
+    
+    section#main-right .cover-item {
+        height: 150px;
+    }
+}
+
+/* ? Media query per lo scroll sotto una certa altezza nella main-nav */
 @media screen and (max-height: 800px) {
     nav#main-nav .nav-playlists .playlists-name {
         height: 150px;
         overflow: auto;
     }
 }
+
