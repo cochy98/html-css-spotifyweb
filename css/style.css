@@ -99,6 +99,15 @@ nav#main-nav,
     flex-direction: column;
 }
 
+nav#main-nav{
+    height: calc(100% - 85px);
+}
+
+section#main-left>.user-profile {
+    height: 85px;
+	background-color: #000000;
+}
+
 nav#main-nav .nav-logo{
     height: 100px;
     padding: 1.5rem;
@@ -163,7 +172,6 @@ section#main-left .user-profile .img-profile{
     width: 80%;
     height: 80%;
 }
-
 
 .content-main{
     padding: 1.5rem;
@@ -273,4 +281,11 @@ footer section#player .player-center{
         margin: 1rem 0 0;
     }
     /* ! FINE Regole per renponsive main-nav su mobile */
+}
+
+@media screen and (max-height: 800px) {
+    nav#main-nav .nav-playlists .playlists-name {
+        height: 150px;
+        overflow: auto;
+    }
 }
