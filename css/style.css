@@ -133,6 +133,7 @@ main nav#main-nav h3 {
 
 main nav#main-nav .nav-user {
 	padding: .5rem 1.5rem;
+    background-color: red;
 }
 
 main nav#main-nav .nav-user .img-profile{
