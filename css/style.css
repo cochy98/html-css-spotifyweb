@@ -31,12 +31,21 @@ a{
     text-decoration: none;
 }
 
-a, h2{
+a, h1, h2{
     color: white;
 }
 
 h2 {
 	font-size: 1.2rem;
+}
+
+section#main-right h1 {
+    font-size: 2rem;
+	padding-bottom: .7rem;
+}
+
+section#main-right h3 {
+	font-size: .85rem;
 }
 
 .btn-large {
@@ -55,7 +64,6 @@ h2 {
 
 .call-to-action,
 footer section#player{
-    /* height: 10vh; */
     height: 100px;
 }
 
@@ -67,7 +75,6 @@ footer section#player{
 }
 
 main{
-    /* height: 90vh; */
     height: calc(100vh - 100px);
 }
 
@@ -173,8 +180,8 @@ section#main-left .user-profile .img-profile{
     height: 80%;
 }
 
-.content-main{
-    padding: 1.5rem;
+.content-main {
+	padding: 0 1.5rem 2rem;
 }
 
 main section#main-right nav{
@@ -184,6 +191,7 @@ main section#main-right nav{
 
 main section#main-right ul {
 	margin: 1rem 1rem 2rem;
+    line-height: 3.5rem;
 }
 
 main section#main-right li{
@@ -299,7 +307,7 @@ footer section#player .player-center{
 }
 
 /* ? Media query per gestire la grandezza dei box tra un dimesione mobile e tablet */
-@media screen and (min-width: 577px) and (max-width: 767px) {
+@media screen and (min-width: 577px) and (max-width: 780px) {
     section#main-right .card-item{
         width: 150px;
     }
