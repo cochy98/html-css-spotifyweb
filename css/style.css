@@ -55,15 +55,11 @@ h2 {
 
 .call-to-action,
 footer section#player{
-    height: 10vh;
+    /* height: 10vh; */
+    height: 100px;
 }
 
 .call-to-action{
-    width: 80%;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 1;
     justify-content: flex-end;
     align-items: center;
     padding: 0 2rem;
@@ -71,7 +67,8 @@ footer section#player{
 }
 
 main{
-    height: 90vh;
+    /* height: 90vh; */
+    height: calc(100vh - 100px);
 }
 
 main,
@@ -79,61 +76,66 @@ main a{
     color: #a3a3a3;
 }
 
-main section#main-nav,
+main nav#main-nav,
 main section#main-content-nav{
     height: 100%;
 }
 
-main section#main-nav {
-	width: 20%;
+main nav#main-nav {
+	/* width: 15%; */
+    width: 290px;
 	background-color: #000000;
 	flex-direction: column;
 	justify-content: space-between;
 }
 
-main section#main-nav .main-logo{
-    width: 60%;
-    margin: 1.5rem 1.5rem;
+nav#main-nav .nav-logo{
+    height: 100px;
+    padding: 1.5rem;
 }
 
-main section#main-nav li {
+main nav#main-nav li {
 	list-style-type: none;
     margin: 1rem 0;
     padding: 0 1.5rem;
 }
 
+main nav#main-nav li .icon-nav{
+    width: 35px;
+}
+
 /* Il primo figlio delle due liste avrà un margin-top minore */
-main section#main-nav li:first-child {
+main nav#main-nav li:first-child {
     margin: .3rem 0 1rem;
 }
 
-main section#main-nav li:hover,
-main section#main-nav li:active{
+main nav#main-nav li:hover,
+main nav#main-nav li:active{
     border-left: 3px solid #b1ff2f;
 }
 
-main section#main-nav li i{
+main nav#main-nav li i{
     font-size: 1.5rem;
 }
 
-main section#main-nav li i.fa-plus-square{
+main nav#main-nav li i.fa-plus-square{
     font-size: 2.5rem;
 }
 
-main section#main-nav li label.none,
-main section#main-nav li p{
+main nav#main-nav li label.none,
+main nav#main-nav li p{
 	padding-left: .6rem;
 }
 
-main section#main-nav h3 {
+main nav#main-nav h3 {
     padding: 1.1rem 1.5rem 0;
 }
 
-main section#main-nav .user-name {
+main nav#main-nav .nav-user {
 	padding: .5rem 1.5rem;
 }
 
-main section#main-nav .user-name .img-profile{
+main nav#main-nav .nav-user .img-profile{
     width: 30px;
     height: 30px;
     background-color: #808080;
@@ -148,10 +150,15 @@ main section#main-nav .user-name .img-profile{
 }
 
 main section#main-content-nav{
-    width: 80%;
+    /* width: 85%; */
+    width: calc(100% - 290px);
     background-color: #141922;
-    padding: 10vh 1.2rem;
+    
     overflow-y: auto;
+}
+
+.content-main{
+    padding: 1.5rem;
 }
 
 main section#main-content-nav nav{
@@ -212,7 +219,7 @@ footer section#player .player-center{
 }
 
 @media screen and (max-width: 576px) {
-    main section#main-nav {
+    main nav#main-nav {
         width: 15%;
     }
 
@@ -220,12 +227,12 @@ footer section#player .player-center{
         width: 85%;
     }
     
-    section#main-nav .main-logo,
-    section#main-nav .none{
+    nav#main-nav .main-logo,
+    nav#main-nav .none{
         display: none;
     }
 
-    section#main-nav .main-logo-small{
+    nav#main-nav .main-logo-small{
         display: block;
     }
     
