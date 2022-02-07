@@ -76,17 +76,27 @@ main a{
     color: #a3a3a3;
 }
 
-main nav#main-nav,
-main section#main-content-nav{
+main section#main-left {
+    width: 290px;
+	background-color: #000000;
+    flex-direction: column;
+	justify-content: space-between;
+} 
+
+main section#main-right{
+    width: calc(100% - 290px);
+    background-color: #141922;
+    overflow-y: auto;
+}
+
+main section#main-left,
+main section#main-right{
     height: 100%;
 }
 
-main nav#main-nav {
-	/* width: 15%; */
-    width: 290px;
-	background-color: #000000;
-	flex-direction: column;
-	justify-content: space-between;
+nav#main-nav,
+.user-profile{
+    flex-direction: column;
 }
 
 nav#main-nav .nav-logo{
@@ -114,29 +124,33 @@ main nav#main-nav li:active{
     border-left: 3px solid #b1ff2f;
 }
 
+#main-nav .nav-nenu,
+#main-nav .nav-playlists{
+    margin-top: 2rem;
+}
+
 main nav#main-nav li i{
     font-size: 1.5rem;
 }
 
-main nav#main-nav li i.fa-plus-square{
+.nav-playlists .title-list{
+    padding: 0 1.5rem;
+}
+
+.title-list i{
     font-size: 2.5rem;
 }
 
-main nav#main-nav li label.none,
-main nav#main-nav li p{
-	padding-left: .6rem;
+.icon-nav,
+.title-list i{
+	margin-right: .6rem;
 }
 
-main nav#main-nav h3 {
-    padding: 1.1rem 1.5rem 0;
-}
-
-main nav#main-nav .nav-user {
+section#main-left .user-profile {
 	padding: .5rem 1.5rem;
-    background-color: red;
 }
 
-main nav#main-nav .nav-user .img-profile{
+section#main-left .user-profile .img-profile{
     width: 30px;
     height: 30px;
     background-color: #808080;
@@ -150,38 +164,31 @@ main nav#main-nav .nav-user .img-profile{
     height: 80%;
 }
 
-main section#main-content-nav{
-    /* width: 85%; */
-    width: calc(100% - 290px);
-    background-color: #141922;
-    
-    overflow-y: auto;
-}
 
 .content-main{
     padding: 1.5rem;
 }
 
-main section#main-content-nav nav{
+main section#main-right nav{
     justify-content: center;
     text-align: center;
 }
 
-main section#main-content-nav ul {
+main section#main-right ul {
 	margin: 1rem 1rem 2rem;
 }
 
-main section#main-content-nav li{
+main section#main-right li{
     display: inline;
 	padding: 0 .5rem;
     text-transform: uppercase;
 }
 
-section#main-content-nav .songs-recently{
+section#main-right .songs-recently{
 	flex-wrap: wrap;
 }
 
-section#main-content-nav .card-item{
+section#main-right .card-item{
     width: 200px; 
     height: 200px;
     margin: 2rem .8rem 2rem 0;
@@ -220,21 +227,50 @@ footer section#player .player-center{
 }
 
 @media screen and (max-width: 576px) {
-    main nav#main-nav {
-        width: 15%;
+    /* ! INIZIO Regole per renponsive main-nav su mobile */
+    main section#main-left {
+        width: 55px;
     }
 
-    main section#main-content-nav {
-        width: 85%;
+    main section#main-right {
+        width: calc(100% - 55px);
     }
-    
-    nav#main-nav .main-logo,
-    nav#main-nav .none{
+
+    /* In questa condizione gli elementi con questa classe non saranno visualizzati */
+    .xs-none{
         display: none;
+    } 
+    
+    nav#main-nav .nav-logo {
+        margin-top: .7rem;
+        height: auto;
+        padding: 0;
     }
 
     nav#main-nav .main-logo-small{
         display: block;
+        width: 40px;
     }
-    
+
+    nav#main-nav,
+    .user-profile{
+        align-items: center;
+    }
+
+    main nav#main-nav li {
+        padding: 0;
+    }
+
+    nav#main-nav li .icon-nav{
+        margin-right: 0;
+    }
+
+    section#main-left .user-profile {
+        padding: .5rem 0;
+    } 
+
+    section#main-left .user-profile .img-profile {
+        margin: 1rem 0 0;
+    }
+    /* ! FINE Regole per renponsive main-nav su mobile */
 }

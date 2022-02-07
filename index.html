@@ -17,64 +17,68 @@
 </head>
 <body>
     <main class="clearfix">
-        <nav id="main-nav" class="fl-left d-flex">
-            <div class="nav-logo">
-                <img class="main-logo" src="img/logo.svg" alt="Spotify Logo">
-                <img class="main-logo-small d-none" src="img/logo-small.svg" alt="Spotify Logo Small">
-            </div>
-            <div class="nav-nenu">
-                <ul>
-                    <li>
-                        <a href="#" class="d-flex al-center">
-                            <img class="icon-nav" src="img/home.svg" alt="home icon">
-                            <label class="none">Home</label>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="d-flex al-center">
-                            <img class="icon-nav" src="img/search.svg" alt="search icon">
-                            <label class="none">Cerca</label>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="d-flex al-center">
-                            <img class="icon-nav" src="img/libreria.svg" alt="library icon">
-                            <label class="none">La tua Libreria</label>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+        <section id="main-left" class="fl-left d-flex">
+            <nav id="main-nav" class="d-flex">
+                <div class="nav-logo">
+                    <img class="main-logo xs-none" src="img/logo.svg" alt="Spotify Logo">
+                    <img class="main-logo-small d-none" src="img/logo-small.svg" alt="Spotify Logo Small">
+                </div>
+                <div class="nav-nenu">
+                    <ul>
+                        <li>
+                            <a href="#" class="d-flex al-center">
+                                <img class="icon-nav" src="img/home.svg" alt="home icon">
+                                <label class="xs-none">Home</label>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="d-flex al-center">
+                                <img class="icon-nav" src="img/search.svg" alt="search icon">
+                                <label class="xs-none">Cerca</label>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="d-flex al-center">
+                                <img class="icon-nav" src="img/libreria.svg" alt="library icon">
+                                <label class="xs-none">La tua Libreria</label>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-            <div class="nav-playlists">
-                <h3>PLAYLIST</h3>
-                <ul>
-                    <li class="d-flex al-center">
-                        <i class="fas fa-plus-square"></i>
-                        <p>Crea Playlist</p>
-                    </li>
-                    <li>Nome Playlist</li>
-                    <li>Nome Playlist</li>
-                    <li>Nome Playlist</li>
-                    <li>Nome Playlist</li>
-                    <li>Nome Playlist</li>
-                    <li>Nome Playlist</li>
-                    <li>Nome Playlist</li>
-                </ul>
-            </div>
+                <div class="nav-playlists xs-none">
+                    <div class="title-list">
+                        <h3>PLAYLIST</h3>
+                        <p class="d-flex al-center"><i class="fas fa-plus-square"></i>Crea Playlist</p>
+                    </div>
+                    <ul>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                    </ul>
+                </div>
+            </nav>
 
-            <div class="nav-user">
-                <p><i class="far fa-arrow-alt-circle-down"></i> Installa app</p>
-                <div class="custom-hr"></div>
+            <div class="user-profile d-flex">
+                <p>
+                    <i class="far fa-arrow-alt-circle-down"></i> 
+                    <label class="xs-none">Installa app</label>
+                </p>
+                <div class="custom-hr xs-none"></div>
                 <div class="d-flex al-center">
                     <div class="img-profile">
                         <img src="img/profile.svg" alt="img profile">
                     </div>
-                    <h2>John Doe</h2>
+                    <h2 class="xs-none">John Doe</h2>
                 </div>
             </div>
-        </nav>
+        </section>
 
-        <section id="main-content-nav" class="fl-left">
+        <section id="main-right" class="fl-left">
             <div class="call-to-action d-flex">
                 <a class="btn-large" href="#">EFFETTUA L'UPGRADE</a>
             </div>
