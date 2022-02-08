@@ -26,6 +26,7 @@ body{
 /* ? Regole FLEX */
 .d-flex{display: flex;}
 .al-center{align-items: center;}
+.justify-center{justify-content: center;}
 
 a{
     text-decoration: none;
@@ -249,7 +250,6 @@ footer section#player{
 footer section#player .player-left,
 footer section#player .player-right{
     width: 20%;
-    height: 100%;
 }
 
 footer section#player .player-center{
@@ -292,19 +292,23 @@ section#player .player-left{
 }
 
 
-section#player .player-center .row-progress>*{
-    display: inline-block;
-}
 
-section#player .player-center .player-progress{
+
+section#player .player-center .player-progress,
+section#player .player-right .vol-fader{
     width: 60%;
     height: 5px;
     background-color: #5a5a5a;
     border-radius: 5px;
+    margin: 1rem .5rem;
 }
 
-section#player .player-center .player-btn{
+section#player .player-btn{
     padding: 0 .5rem;
+}
+
+.player-btn.fa-play-circle{
+    font-size: 2rem;
 }
 
 @media screen and (max-width: 576px) {
