@@ -7,6 +7,7 @@
 
 /* Font per tutto il body */
 body{
+    min-width: 530px;
     font-family: 'Circular Std', sans-serif;
     color: white;
 }
@@ -89,6 +90,7 @@ main section#main-left {
 	background-color: #000000;
     flex-direction: column;
 	justify-content: space-between;
+    overflow-y: hidden;
 } 
 
 main section#main-right{
@@ -201,7 +203,7 @@ main section#main-right ul {
 
 main section#main-right li{
     display: inline;
-	padding: 0 .5rem;
+	padding: 0 .8rem;
     text-transform: uppercase;
 }
 
@@ -229,10 +231,6 @@ section#main-right .cover-item>img{
     object-fit: cover;
 }
 
-
-
-
-
 .popular-artists .cover-item>img{
     border-radius: 50%;
 }
@@ -247,38 +245,20 @@ footer section#player{
     align-items: center;
 }
 
-footer section#player .player-left,
+footer section#player .player-left{
+    /* width: 20%; */
+    flex-basis: 300px;
+}
+
 footer section#player .player-right{
-    width: 20%;
+    /* width: 15%; */
+    flex-basis: 300px;
 }
 
 footer section#player .player-center{
-    flex-basis: 40%;
+    flex-basis: 40%; 
+    /* flex-basis: calc(100vw - 600px); */
     text-align: center;
-}
-
-footer section#player .player-left,
-footer section#player .player-right,
-footer section#player .player-center{
-    background-color: tomato;
-}
-
-footer h2{
-    font-size: 1.1rem;
-}
-
-footer h3{
-    color: #a3a3a3;
-    font-size: 0.8rem;
-}
-
-section#player .player-left{
-    justify-content: space-between;
-    align-items: center;
-}
-
-.player-left #song-info{
-    align-items: center;
 }
 
 .player-left #cover-song{
@@ -291,8 +271,23 @@ section#player .player-left{
     width: 100%;
 }
 
+footer h2{
+    font-size: 1.1rem;
+}
 
+footer a{
+    color: #a3a3a3;
+    font-size: 0.8rem;
+}
 
+section#player .player-left{
+    justify-content: space-between;
+}
+
+section#player .player-left i{
+    color: #a3a3a3;
+    padding: .2rem;
+}
 
 section#player .player-center .player-progress,
 section#player .player-right .vol-fader{
@@ -304,15 +299,28 @@ section#player .player-right .vol-fader{
 }
 
 section#player .player-btn{
-    padding: 0 .5rem;
+    padding: 0 .6rem;
 }
 
 .player-btn.fa-play-circle{
-    font-size: 2rem;
+    font-size: 2.2rem;
 }
 
+/* ? Su schermi large le card saranno più grandi */
+@media screen and (min-width: 992px) {
+    section#main-right .card-item{
+        width: 220px;
+    }
+    
+    section#main-right .cover-item {
+        height: 220px;
+    }
+}
+
+
+
+/* ? INIZIO Regole per renponsive main-nav su mobile */
 @media screen and (max-width: 576px) {
-    /* ! INIZIO Regole per renponsive main-nav su mobile */
     main section#main-left {
         width: 55px;
     }
@@ -357,8 +365,8 @@ section#player .player-btn{
     section#main-left .user-profile .img-profile {
         margin: 1rem 0 0;
     }
-    /* ! FINE Regole per renponsive main-nav su mobile */
 }
+/* ? FINE Regole per renponsive main-nav su mobile */
 
 /* ? Media query per gestire la grandezza dei box tra un dimesione mobile e tablet */
 @media screen and (min-width: 577px) and (max-width: 780px) {
@@ -379,3 +387,25 @@ section#player .player-btn{
     }
 }
 
+
+
+/* INIZIO REGOLE Hover sulle card */
+#main-right .cover-item{
+    position: relative;
+}
+
+.cover-item-hidden{
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 3rem;
+    color: white;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.cover-item:hover .cover-item-hidden{
+    display: flex;
+}
+/* FINE REGOLE Hover sulle card */
