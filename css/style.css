@@ -288,13 +288,21 @@ section#player .player-left i{
     padding: .2rem;
 }
 
-section#player .player-center .player-progress,
+section#player .player-center .player-bar,
 section#player .player-right .vol-fader{
     width: 60%;
     height: 5px;
     background-color: #5a5a5a;
     border-radius: 5px;
     margin: 1rem .5rem;
+}
+
+.player-bar>.player-bar-progress,
+.vol-fader>.vol-fader-progress{
+    width: 25%;
+    height: 100%;
+    background-color: white;
+    border-radius: 5px;
 }
 
 section#player .player-btn{
@@ -417,6 +425,11 @@ section#player .player-left i:hover{
 
 .player-btn.fa-play-circle:hover {
 	font-size: 2.22rem;
+}
+
+.player-bar>.player-bar-progress:hover,
+.vol-fader>.vol-fader-progress:hover{
+    background-color: #b1ff2f;
 }
 /* ? FINE Hover sul footer */
 
