@@ -385,7 +385,42 @@ section#player .player-btn{
 
 
 
-/* INIZIO REGOLE Hover sulle card */
+
+/* Quando sono in hover sul pulsante, diventa più grande */
+.btn-large:hover {
+	font-size: 1rem;
+}
+
+/* Quando sono in hover sui li, il testo diventa bianco */
+li:hover, 
+li a:hover,
+.title-list p:hover,
+.user-profile p:hover{
+	color: white;
+}
+
+/* Hover sui li del main-nav */
+main nav#main-nav li:hover,
+main nav#main-nav li:active{
+    border-left: 3px solid #b1ff2f;
+}
+
+/* ? INIZIO Hover sul footer */
+/* Quando sono in hover sul nome del brano, cambio la decorazione del font */
+#artist a:hover{
+    text-decoration: underline;
+}
+
+section#player .player-left i:hover{
+    color: white;
+}
+
+.player-btn.fa-play-circle:hover {
+	font-size: 2.22rem;
+}
+/* ? FINE Hover sul footer */
+
+/* ? INIZIO REGOLE Hover sulle card */
 #main-right .cover-item{
     position: relative;
 }
@@ -404,10 +439,4 @@ section#player .player-btn{
 .cover-item:hover .cover-item-hidden{
     display: flex;
 }
-/* FINE REGOLE Hover sulle card */
-
-/* Hover sui li del main-nav */
-main nav#main-nav li:hover,
-main nav#main-nav li:active{
-    border-left: 3px solid #b1ff2f;
-}
+/* ? FINE REGOLE Hover sulle card */
