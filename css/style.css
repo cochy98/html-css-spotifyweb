@@ -46,8 +46,12 @@ section#main-right h1 {
 	padding-bottom: .7rem;
 }
 
-section#main-right h3 {
-	font-size: .85rem;
+section#main-right .songs-recently h2{
+    font-size: 1.1rem;
+}
+
+section#main-right .songs-recently h3 {
+	font-size: .75rem;
 }
 
 .btn-large {
@@ -82,7 +86,8 @@ main{
 
 main,
 main a{
-    color: #a3a3a3;
+    /* color: #a3a3a3; */
+    color: rgba(255, 255, 255, .6);
 }
 
 main section#main-left {
@@ -136,11 +141,6 @@ main nav#main-nav li .icon-nav{
 /* Il primo figlio delle due liste avrà un margin-top minore */
 main nav#main-nav li:first-child {
     margin: .3rem 0 1rem;
-}
-
-main nav#main-nav li:hover,
-main nav#main-nav li:active{
-    border-left: 3px solid #b1ff2f;
 }
 
 #main-nav .main-logo{
@@ -214,15 +214,14 @@ section#main-right .popular-artists{
 }
 
 section#main-right .card-item{
-    width: 200px;
+    flex-basis: calc((100% - 4.8rem) / 6);
     text-align: center;
     margin: 2rem .8rem 3rem 0;
 }
 
 section#main-right .cover-item{
     width: 100%; 
-    height: 200px;
-    margin-bottom: 1rem;
+    margin-bottom: .3rem;
 }
 
 section#main-right .cover-item>img{
@@ -306,21 +305,29 @@ section#player .player-btn{
     font-size: 2.2rem;
 }
 
-/* ? Su schermi large le card saranno più grandi */
-@media screen and (min-width: 992px) {
+/* ? Su schermi large (fino a 992px), vedrò 4 card nel main-content */
+@media screen and (max-width: 992px) {
     section#main-right .card-item{
-        width: 220px;
+        flex-basis: calc((100% - 4.8rem) / 4);
     }
-    
-    section#main-right .cover-item {
-        height: 220px;
+    section#main-right .songs-recently h2 {
+        font-size: .9rem;
+    }
+    section#main-right .songs-recently h3 {
+        font-size: .7rem;
     }
 }
 
+/* ? Su schermi fino ai medi (fino a 768px), vedrò 2 card nel main-content */
+@media screen and (max-width: 768px) {
+    section#main-right .card-item{
+        flex-basis: calc((100% - 4.8rem) / 2);
+    }
+}
 
-
-/* ? INIZIO Regole per renponsive main-nav su mobile */
+/* ? Su mobile (fino a 576px) visualizzerò sempre due card, ma la main-nav si restringe  */
 @media screen and (max-width: 576px) {
+    /* Su mobile cambia la larghezza della main-nav */
     main section#main-left {
         width: 55px;
     }
@@ -368,17 +375,6 @@ section#player .player-btn{
 }
 /* ? FINE Regole per renponsive main-nav su mobile */
 
-/* ? Media query per gestire la grandezza dei box tra un dimesione mobile e tablet */
-@media screen and (min-width: 577px) and (max-width: 780px) {
-    section#main-right .card-item{
-        width: 150px;
-    }
-    
-    section#main-right .cover-item {
-        height: 150px;
-    }
-}
-
 /* ? Media query per lo scroll sotto una certa altezza nella main-nav */
 @media screen and (max-height: 800px) {
     nav#main-nav .nav-playlists .playlists-name {
@@ -399,7 +395,7 @@ section#player .player-btn{
     position: absolute;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: calc(100% - .3rem);
     font-size: 3rem;
     color: white;
     background-color: rgba(0, 0, 0, .6);
@@ -409,3 +405,9 @@ section#player .player-btn{
     display: flex;
 }
 /* FINE REGOLE Hover sulle card */
+
+/* Hover sui li del main-nav */
+main nav#main-nav li:hover,
+main nav#main-nav li:active{
+    border-left: 3px solid #b1ff2f;
+}
