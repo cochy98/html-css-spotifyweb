@@ -192,19 +192,29 @@ section#main-left .user-profile .img-profile{
 }
 
 main section#main-right nav{
-    justify-content: center;
     text-align: center;
 }
 
 main section#main-right ul {
 	margin: 1rem 1rem 2rem;
     line-height: 3.5rem;
+    flex-wrap: wrap;
 }
 
 main section#main-right li{
-    display: inline;
+    display: flex;
+    flex-direction: column;
 	padding: 0 .8rem;
     text-transform: uppercase;
+    align-items: center;
+}
+
+/* piccolo hr sotto i li della nav che viene visualizzato in hover */
+.min-hr{
+    display: none;
+    width: 2.2rem;
+    height: .2rem;
+    background-color: #b1ff2f;
 }
 
 section#main-right .songs-recently,
@@ -245,18 +255,15 @@ footer section#player{
 }
 
 footer section#player .player-left{
-    /* width: 20%; */
     flex-basis: 300px;
 }
 
 footer section#player .player-right{
-    /* width: 15%; */
     flex-basis: 300px;
 }
 
 footer section#player .player-center{
     flex-basis: 40%; 
-    /* flex-basis: calc(100vw - 600px); */
     text-align: center;
 }
 
@@ -403,6 +410,7 @@ section#player .player-btn{
 
 
 
+/* ! Effetti hover su tutta la pagina */
 
 /* Quando sono in hover sul pulsante, diventa più grande */
 .btn-large:hover {
@@ -415,6 +423,11 @@ li a:hover,
 .title-list p:hover,
 .user-profile p:hover{
 	color: white;
+}
+
+/* Quando sono in hover solo sui li della main-nav-right, visualizzo un hr */
+section#main-right li:hover .min-hr{
+    display: block;
 }
 
 /* Hover sui li del main-nav */
