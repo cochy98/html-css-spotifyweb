@@ -303,6 +303,16 @@ section#player .player-right .vol-fader{
     height: 100%;
     background-color: white;
     border-radius: 5px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.ball-progress{
+    display: none;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: white;
 }
 
 section#player .player-btn{
@@ -427,9 +437,16 @@ section#player .player-left i:hover{
 	font-size: 2.22rem;
 }
 
+/* Quando sono in hover sulla barra di avanzamento, le cambio il colore in verde */
 .player-bar>.player-bar-progress:hover,
 .vol-fader>.vol-fader-progress:hover{
     background-color: #b1ff2f;
+}
+
+/* Quando sono in hover sulla barra di avanzamento, mostro il pallino per avanzare */
+.player-bar-progress:hover .ball-progress,
+.vol-fader-progress:hover .ball-progress{
+    display: block;
 }
 /* ? FINE Hover sul footer */
 
