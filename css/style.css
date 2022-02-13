@@ -7,7 +7,7 @@
 
 /* Font per tutto il body */
 body{
-    min-width: 530px;
+    min-width: 530px; /* Sotto una certa larghezza il body non puo scendere */
     font-family: 'Circular Std', sans-serif;
     color: white;
 }
@@ -19,9 +19,11 @@ body{
     clear: both;
 }
 
+/* Classi per l'utilizzo di float */
 .fl-left{float: left;}
 .fl-right{float: right;}
 
+/* Classe per rendere un block display none */
 .d-none{display: none;}
 
 /* ? Regole FLEX */
@@ -29,31 +31,38 @@ body{
 .al-center{align-items: center;}
 .justify-center{justify-content: center;}
 
+/* Tutti i link non hanno il testo sottolineato */
 a{
     text-decoration: none;
 }
 
+/* Colore bianco per i seguenti tag text */
 a, h1, h2{
     color: white;
 }
 
+/* Tutti gli h2 hanno in seguente font size */
 h2 {
 	font-size: 1.2rem;
 }
 
+/* Tutti gli h1 del main-right avranno un font maggiorato (essendo titoli) e un padding bottom */
 section#main-right h1 {
     font-size: 2rem;
 	padding-bottom: .7rem;
 }
 
+/* I titoli dei brani del main-right avrannò il seguente font size */
 section#main-right .songs-recently h2{
     font-size: 1.1rem;
 }
 
+/* I sottotitoli dei brani (artista) del main-right avrannò il seguente font size */
 section#main-right .songs-recently h3 {
 	font-size: .75rem;
 }
 
+/* Classe generica per creare un button large */
 .btn-large {
 	font-size: 0.8rem;
 	padding: .7rem 2.2rem;
@@ -68,11 +77,13 @@ section#main-right .songs-recently h3 {
     margin: .3rem 0 .7rem;
 }
 
+/* La call to action e il footer avrannò un'altezza fissa, sempre */
 .call-to-action,
 footer section#player{
     height: 100px;
 }
 
+/* La call to action è in flex, quindi i suoi elementi sono allineati a destra ed ha uno sfondo trasparene */
 .call-to-action{
     justify-content: flex-end;
     align-items: center;
@@ -80,16 +91,19 @@ footer section#player{
     background-color: rgba(0, 0, 0, .3);
 }
 
+/* Il main prende tutta la grandezza dello schermo tranne i 100px del footer */
 main{
     height: calc(100vh - 100px);
 }
 
+/* Il main avrà un colore font generico griggino */
 main,
 main a{
     /* color: #a3a3a3; */
     color: rgba(255, 255, 255, .6);
 }
 
+/* La navbar laterale del main avrà una larghezza fissa su tutti i dispositivi (tranne mobile), i suoi figli sono organizzati in colonna con flex e viene nascosta quando non c'è abbastanza altezza per contenerla */
 main section#main-left {
     width: 290px;
 	background-color: #000000;
@@ -98,6 +112,7 @@ main section#main-left {
     overflow-y: hidden;
 } 
 
+/* La parte destra del main (quella del contenuto) avrà una larghezza del 100% meno la larghezza della navbar laterale. Superati un numero tot di elementi al suo interno, viene mostrata una scrollbar laterale */
 main section#main-right{
     width: calc(100% - 290px);
     background-color: #141922;
@@ -109,31 +124,42 @@ main section#main-right{
     height: 100%;
 }
 
+/* La navbar e la user profile vengono orgnanizzate con flex */
 nav#main-nav,
 .user-profile{
     flex-direction: column;
 }
 
+/* La navbar prende l'altezza del 100% meno lo spazio occupato dalla user profile */
 nav#main-nav{
     height: calc(100% - 85px);
 }
 
+/* La user profile prende un'altezza fissa */
 section#main-left>.user-profile {
     height: 85px;
 	background-color: #000000;
 }
 
+/* Altezza fissa per il container del logo della main navbar */
 nav#main-nav .nav-logo{
     height: 100px;
     padding: 1.5rem;
 }
 
+/* Il logo della navbar prende l'80% dello spazio a disposizione */
+#main-nav .main-logo{
+    width: 80%;
+}
+
+/* Le liste della navbar non hanno nessun stile di default e vengono riorganizzati i margini */
 main nav#main-nav li {
 	list-style-type: none;
     margin: 1rem 0;
     padding: 0 1.5rem;
 }
 
+/* Le icone della navbar hanno una larghezza fissa */
 main nav#main-nav li .icon-nav{
     width: 35px;
 }
@@ -143,10 +169,7 @@ main nav#main-nav li:first-child {
     margin: .3rem 0 1rem;
 }
 
-#main-nav .main-logo{
-    width: 80%;
-}
-
+/* INIZIO formattazione dei li della main navbar */
 #main-nav .nav-nenu,
 #main-nav .nav-playlists{
     margin-top: 2rem;
@@ -168,7 +191,9 @@ main nav#main-nav li i{
 .title-list i{
 	margin-right: .6rem;
 }
+/* /FINE formattazione dei li della main navbar */
 
+/* INIZIO formattazione della user profile */
 section#main-left .user-profile {
 	padding: .5rem 1.5rem;
 }
@@ -186,11 +211,14 @@ section#main-left .user-profile .img-profile{
     width: 80%;
     height: 80%;
 }
+/* /FINE formattazione della user profile */
 
+/* Padding laterale per il contenitore del main-right */
 .content-main {
 	padding: 0 1.5rem 2rem;
 }
 
+/* INIZIO formattazione content navbar */
 main section#main-right nav{
     text-align: center;
 }
@@ -198,7 +226,7 @@ main section#main-right nav{
 main section#main-right ul {
 	margin: 1rem 1rem 2rem;
     line-height: 3.5rem;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Quando la larghezza dello schermo non è sufficiente, wrap manda a capo gli elementi della lista */
 }
 
 main section#main-right li{
@@ -216,6 +244,7 @@ main section#main-right li{
     height: .2rem;
     background-color: #b1ff2f;
 }
+/* /FINE formattazione content navbar */
 
 section#main-right .songs-recently,
 section#main-right .your-albums,
@@ -223,50 +252,59 @@ section#main-right .popular-artists{
 	flex-wrap: wrap;
 }
 
+/* Su schermi xl-large visualizzo 6 card */
 section#main-right .card-item{
     flex-basis: calc((100% - 4.8rem) / 6);
     text-align: center;
     margin: 2rem .8rem 3rem 0;
 }
 
+/* Il div cover prende il 100% della larghezza del padre */
 section#main-right .cover-item{
     width: 100%; 
     margin-bottom: .3rem;
 }
 
+/* L'immagine cover viene 'forzata' in cover, così non è strecciata */
 section#main-right .cover-item>img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+/* L'immagine cover dei popular artist diventa un cerchio */
 .popular-artists .cover-item>img{
     border-radius: 50%;
 }
 
+/* ? FOOTER */
 footer{
     background-color: #282828;
 }
 
-/* ? FOOTER */
+/* I tre box del footer sono distanziati con space-between */
 footer section#player{
     justify-content: space-between;
     align-items: center;
 }
 
+/* Player-left ha una larghezza fissa */
 footer section#player .player-left{
     flex-basis: 300px;
 }
 
+/* Player-right ha una larghezza fissa */
 footer section#player .player-right{
     flex-basis: 300px;
 }
 
+/* Player-center occupa solo il 40% */
 footer section#player .player-center{
     flex-basis: 40%; 
     text-align: center;
 }
 
+/* INIZIO formattazzaione del player-left */
 .player-left #cover-song{
     width: 65px;
     height: 65px;
@@ -294,6 +332,7 @@ section#player .player-left i{
     color: #a3a3a3;
     padding: .2rem;
 }
+/* /FINE formattazzaione del player-left */
 
 section#player .player-center .player-bar,
 section#player .player-right .vol-fader{
